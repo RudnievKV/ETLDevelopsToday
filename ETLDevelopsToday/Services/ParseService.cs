@@ -81,7 +81,7 @@ namespace ETLDevelopsToday.Services
                 string[]? fieldsForLog = null;
                 try
                 {
-                    fieldsForLog = csv.Context.Parser.Record;
+                    fieldsForLog = csv.Context.Parser?.Record;
 
                     var trip = MapToEntity(csv, map);
                     if (trip == null)
